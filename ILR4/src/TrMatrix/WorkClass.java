@@ -47,7 +47,7 @@ public class WorkClass {
         Random rand = new Random();
         for (int i = 0; i < myMatrix.length; i++) {
             for (int j = 0; j < myMatrix[i].length; j++) {
-                myMatrix[i][j] = rand.nextInt(100);
+                myMatrix[i][j] = rand.nextInt(99);
             }
         }
         for (int i = 0; i < myMatrix.length; i++) {
@@ -60,11 +60,11 @@ public class WorkClass {
         int turnMatrix[][] = new int[getSizeColumn()][getSizeLine()];
         for (int i = 0; i < myMatrix.length; i++) {
             for (int j = 0; j < myMatrix[i].length; j++) {
-                turnMatrix[i][j] = myMatrix[j][i];
+                turnMatrix[j][i] = myMatrix[i][j];
             }
         }
         for (int i = 0; i < turnMatrix.length; i++) {
-            System.out.println(Arrays.toString(myMatrix[i]));
+            System.out.println(Arrays.toString(turnMatrix[i]));
         }
     }
 }
